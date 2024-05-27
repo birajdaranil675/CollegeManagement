@@ -20,6 +20,13 @@ builder.Services.AddCors(options =>
                       });
 });
 
+
+builder.Host.ConfigureLogging(logging =>
+{
+    logging.ClearProviders();
+    logging.AddConsole();
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -4,6 +4,7 @@ import Layout from './pages/Layout'
 import Home from './pages/Home'
 import NoPage from './pages/NoPage'
 import AddStudent from './pages/AddStudent'
+import UpdateStudentInfo from './pages/UpdateStudentInfo'
 
 function App() {
 
@@ -11,13 +12,18 @@ function App() {
     createRoutesFromElements(
       <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="/StudentInfo" element={<Student />} />
+            <Route path="/studentInfo" element={<Student />} />
             <Route path="/addStudent" element={<AddStudent />} />
+            <Route path="/updateStudentInfo" element={<UpdateStudentInfo />} />
             <Route path="*" element={<NoPage />} />
       </Route>
     )
   );
   return <RouterProvider router={router}/>
+
+  // return(
+  //   <Student/>
+  // )
 }
 
 export default App

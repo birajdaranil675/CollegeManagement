@@ -46,11 +46,13 @@ namespace MyCollege.Api.Implementations
             var oldData = studentList.FirstOrDefault(stud => stud.Id == id);
 
             if (oldData == null)
-                throw new Exception($"Student with name {updatedStudent.Name} does no exits.");
+                throw new Exception($"Student with name {updatedStudent.FirstName} does no exits.");
 
             studentList.Remove(oldData);
 
-            oldData.Name = updatedStudent.Name;
+            oldData.FirstName = updatedStudent.FirstName;
+            oldData.MiddleName = updatedStudent.MiddleName;
+            oldData.LastName = updatedStudent.LastName;
             oldData.Email = updatedStudent.Email;
             oldData.Phone = updatedStudent.Phone;
 
