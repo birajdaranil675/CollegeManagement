@@ -46,7 +46,7 @@ function UpdateStudentInfo() {
 
     return (
         <div className="px-10 mt-20 ml-96 border-2 h-2/4 w-1/3">
-            <h2 class="ml-10 text-4xl font-extrabold dark:text-white">Update Student</h2>
+            <h2 className="ml-10 text-4xl font-extrabold dark:text-white">Update Student</h2>
             <form className="max-w-md mx-auto mt-14" onSubmit={handleSubmit}>
                 <div className="relative z-0 w-full mb-5 group">
                     <input
